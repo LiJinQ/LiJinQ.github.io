@@ -101,5 +101,17 @@ friends: [
     {
         title: "Lei Yuan",
         href: "https://imlcl.store"
+    },
+    {
+        title: "Acceleactor",
+        href: "https://me.csdn.net/Acceleactor"
+    },
+    {
+        title: "莫烦PYTHON",
+        href: "https://morvanzhou.github.io/tutorials/machine-learning/"
+    },
+    {
+        title: "方志朋的博客",
+        href: "https://www.fangzhipeng.com/"
     }
 ]
