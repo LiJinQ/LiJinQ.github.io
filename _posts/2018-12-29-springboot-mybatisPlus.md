@@ -381,3 +381,4 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
 
 
 [MyBatis-Plus官方地址](https://mp.baomidou.com/)
+[源码git地址](https://github.com/LiJinQ/mp_demo.git)
