@@ -13,7 +13,9 @@ tags:
 
 # MyBatis-Plus，让开发更有效率
 >MyBatis-Plus（简称 MP）是一个 MyBatis 的增强工具，在 MyBatis 的基础上只做增强不做改变，为简化开发、提高效率而生。
+
 ## 数据库结构与测试数据
+
 MyBatis-Plus在自动生成代码时，会将数据库的注释同时生成到实体类中
 ```
 SET FOREIGN_KEY_CHECKS=0;
