@@ -110,7 +110,7 @@ SET FOREIGN_KEY_CHECKS=1;
 ```
 ## 配置文件 
 
-```application.yml```
+application.yml
 
 
 ```
