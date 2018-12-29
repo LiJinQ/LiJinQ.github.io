@@ -109,7 +109,10 @@ SET FOREIGN_KEY_CHECKS=1;
         </dependency>
 ```
 ## 配置文件 
+
 ```application.yml```
+
+
 ```
 spring:
   datasource:
@@ -130,7 +133,9 @@ mybatis-plus:
     map-underscore-to-camel-case: true
     cache-enabled: false
 ```
+
 >MyBatis-Plus为我们提供了自动生成mapper.xml文件、pojo实体类、dao层、service层的方法，可以将其放在test文件下
+
 ```
 public class CodeGenerator {
 
