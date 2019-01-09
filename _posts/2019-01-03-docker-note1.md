@@ -4,7 +4,7 @@ title:      Docker学习笔记（一）Docker的安装与基本命令
 subtitle:   Docker学习笔记
 date:       2019-01-03
 author:     LJQ
-header-img: img/post-bj-kj.jpg
+header-img: img/post-bg-kj.jpg
 catalog: true
 tags:
     - Docker
@@ -13,12 +13,12 @@ tags:
 
 # Linux下安装docker
 #### 下载docker
->sudo wget -qO- https://get.docker.com | sh
+```sudo wget -qO- https://get.docker.com | sh```
 
-sudo：普通用户，希望以root的身份执行命令
-wget：命令行的下载工具
-https://get.docker.com：docker的下载地址
--q：希望减少wget的输出
+- sudo：普通用户，希望以root的身份执行命令
+- wget：命令行的下载工具
+- https://get.docker.com：docker的下载地址
+- -q：希望减少wget的输出
 
 #### 将指定用户添加到docker组里
 >sudo usermod -aG docker 你指定的用户
@@ -30,7 +30,7 @@ https://get.docker.com：docker的下载地址
 
 >中间是**DOCKER_Host**，是进行docker操作的虚拟机，虚拟机上运行了一个核心程序：**docker deamon**，docker的各种操作都是通过这个程序进行的，比如下载docker的镜像、运行一个docker容器，我们通过在左边的**Client**输入docker命令到*docker deamon*程序，然后由*docker deamon*程序进行实际的操作，*docker deamon*可以根据```push```等命令从右边的**Register**拖取需要的镜像到Host中。
 
-#基本docker命令
+# 基本docker命令
 #### 从远程拉取镜像命令
 >docker pull 镜像名称
 
