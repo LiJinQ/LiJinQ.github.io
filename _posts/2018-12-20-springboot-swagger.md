@@ -15,8 +15,7 @@ tags:
 
 >项目开发中，API 文档是很重要的一环，好的API文档编写习惯可以是前后端交互时节约大量时间，当API过多时，写API文档无疑是一件费时费力的事，**swagger**就是一款可以帮助各位快速、优雅生成API文档的一款框架。本文将基于**springboot**项目集成**swagger2**框架。
 
-##
-项目结构
+## 项目结构
 ![2018-12-20-springboot-swagger-项目结构](https://upload-images.jianshu.io/upload_images/15504753-7eb2be6c54432ebb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ## 依赖导入
