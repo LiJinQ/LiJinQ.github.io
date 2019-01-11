@@ -8,7 +8,6 @@ header-img: img/post-bg-ios9-web.jpg
 catalog: true
 tags:
     - springboot
-    - springboot项目笔记
 ---
 
 # 厌倦手码API文档？试试swagger吧

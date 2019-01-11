@@ -8,7 +8,6 @@ header-img: img/MyBatis-Plus-BG.jpg
 catalog: true
 tags:
     - springboot
-    - springboot项目笔记
 ---
 
 # MyBatis-Plus，让开发更有效率
