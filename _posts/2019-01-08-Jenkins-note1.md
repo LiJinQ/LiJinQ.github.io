@@ -79,7 +79,7 @@ docker run --name="demo_eureka" -p 8761:8761 -d demo_eureka:1.0
 ##### Dockerfile
 ```
 # 版本信息
-#java：latest 为centos官方java运行环境镜像，600多M ,可以提前pull到主机本地
+#java：latest 为centos官方java运行环境镜像
 FROM java:latest
 MAINTAINER cds "ljq"
 
