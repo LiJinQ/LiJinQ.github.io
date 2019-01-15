@@ -11,19 +11,33 @@ tags:
 ---
 
 # Spring Cloud简介
+
 >Spring Cloud是一系列框架的有序集合。它利用Spring Boot的开发便利性巧妙地简化了分布式系统基础设施的开发，如服务发现注册、配置中心、消息总线、负载均衡、断路器、数据监控等，都可以用Spring Boot的开发风格做到一键启动和部署。Spring Cloud并没有重复制造轮子，它只是将目前各家公司开发的比较成熟、经得起实际考验的服务框架组合起来，通过Spring Boot风格进行再封装屏蔽掉了复杂的配置和实现原理，最终给开发者留出了一套简单易懂、易部署和易维护的分布式系统开发工具包。
+
 # 服务注册中心-Eureka Server
+
 Eureka Service为框架内的服务提供注册功能。微服务在启动后，可以自动注册到Eureka Service提供的服务注册中心里，用户可以通过注册中心检测微服务的健康情况。
+
 ### idea创建
+
 **File->new->project->Spring Initializr**
+
 ![](https://upload-images.jianshu.io/upload_images/15504753-cd1961c20141daac.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 **next**
+
 ![](https://upload-images.jianshu.io/upload_images/15504753-e6500d4773db8fc1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 **next->Cloud Discory->Eureka Server**
+
 ![](https://upload-images.jianshu.io/upload_images/15504753-602b82a430c36ff5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 **next->finish**
+
 ### pom
+
 创建后的pom如下
+
 ```
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -91,7 +105,9 @@ Eureka Service为框架内的服务提供注册功能。微服务在启动后，
 </project>
 
 ```
+
 ##### 2.0以下版本需要引入以下依赖
+
 ```
 <!--eureka server -->
 		<dependency>
@@ -99,7 +115,9 @@ Eureka Service为框架内的服务提供注册功能。微服务在启动后，
 			<artifactId>spring-cloud-starter-eureka-server</artifactId>
 		</dependency>
 ```
+
 ##### 2.0以上版本需要引入以下依赖
+
 ```
 <!--eureka server -->
         <dependency>
@@ -109,6 +127,7 @@ Eureka Service为框架内的服务提供注册功能。微服务在启动后，
 ```
 
 ### application.yml
+
 ```
 server:
   port: 8761
@@ -129,9 +148,11 @@ eureka:
     eviction-interval-timer-in-ms: 40000  # 清理间隔（单位毫秒，默认是60*1000）
 
 ```
+
 ### DemoEurekaApplication.java
 
 Eureka Server需要在启动类上添加```@EnableEurekaServer```注解
+
 ```
 @EnableEurekaServer
 @SpringBootApplication
@@ -144,16 +165,23 @@ public class DemoEurekaApplication {
 }
 
 ```
+
 ### 运行效果
+
 启动项目后浏览器访问*http://localhost:8761*
+
 ![](https://upload-images.jianshu.io/upload_images/15504753-c69a371ef68e60d8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 # 微服务提供者-Eureka Client
+
 ### idea创建
+
 项目创建方式同上，在选择组件时选择**web->web**可以直接引入web依赖
+
 ![](https://upload-images.jianshu.io/upload_images/15504753-89c568e57c8d4d36.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ### pom
+
 ```
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -229,7 +257,9 @@ public class DemoEurekaApplication {
 </project>
 
 ```
+
 ##### 2.0以下版本需要引入以下依赖
+
 ```
 <!--eureka client-->
 		<dependency>
@@ -237,7 +267,9 @@ public class DemoEurekaApplication {
 			<artifactId>spring-cloud-starter-eureka</artifactId>
 		</dependency>
 ```
+
 ##### 2.0以上版本需要引入以下依赖
+
 ```
 <!--eureka client-->
         <dependency>
@@ -245,7 +277,9 @@ public class DemoEurekaApplication {
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
 ```
+
 ### application.yml
+
 ```
 spring:
   application:
@@ -261,9 +295,12 @@ server:
   #服务开放端口
   port: 8762
 ```
+
 ### DemoClient1Application.java
-2.0版本以下需要在启动类添加```@EnableEurekaClient```注解
-2.0版本以上则无需添加注解
+
+2.0版本以下需要在启动类添加```@EnableEurekaClient```注解，
+2.0版本以上则无需添加注解。
+
 ```
 @SpringBootApplication
 @RestController
@@ -284,14 +321,22 @@ public class DemoClient1Application {
 
 }
 ```
+
 ### 运行效果
+
 ##### 运行项目后查看注册中心。
+
 ![](https://upload-images.jianshu.io/upload_images/15504753-6e15d20ba42e6590.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 service-client1服务已经注册到注册中心。
+
 ##### 查看客户端接口
+
 浏览器输入*http://localhost:8762/test*
+
 ![](https://upload-images.jianshu.io/upload_images/15504753-b4032bcd4f568636.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 # 参数配置
+
 ```
 server:
   port: 8761
@@ -326,13 +371,21 @@ eureka:
     #清理无效节点的时间间隔，单位毫秒，默认是60*1000
     eviction-interval-timer-in-ms: 40000
 ```
+
 # End
+
 ### 项目源码地址
+
 - [eureka-server](https://github.com/LiJinQ/demo_eureka.git)
+
 - [eureka-client](https://github.com/LiJinQ/demo_client1.git)
+
 ### 参考资料
+
 - [SpringCloud教程第一篇](https://www.fangzhipeng.com/springcloud/2017/07/12/sc01-eureka/)
+
 - [spring cloud eureka 参数配置](https://segmentfault.com/a/1190000008378268)
+
 - [SpringCloud系列第03节之注册中心Eureka进阶](https://jadyer.cn/2017/01/17/springcloud-eureka-advance/)
 
 
