@@ -4,7 +4,7 @@ title:      Docker学习笔记（一）Docker的安装与基本命令
 subtitle:   Docker学习笔记
 date:       2019-01-03
 author:     LJQ
-header-img: img/post-bg-kj.jpg
+header-img: img/post-bg-docker-note1.jpg
 catalog: true
 tags:
     - Docker
