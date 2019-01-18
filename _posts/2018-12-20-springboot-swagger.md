@@ -19,7 +19,7 @@ tags:
 
 ## 依赖导入
 
-```
+~~~xml
         <!--swagger2 start-->
         <dependency>
             <groupId>io.springfox</groupId>
@@ -41,11 +41,11 @@ tags:
             <version>2.9.2</version>
         </dependency>
         <!--swagger2 end-->
-```
+~~~
 
 ## Controller层
 
-```
+~~~java
 @RestController
 @RequestMapping("/test")
 @Api(tags = "测试接口")
@@ -75,11 +75,11 @@ public class TestController {
     }
 }
 
-```
+~~~
 
 ## Vo层
 
-```
+~~~java
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -96,11 +96,11 @@ public class TestVo {
 
 }
 
-```
+~~~
 
 ## Config类
 
-```
+~~~java
 @Configuration
 @EnableSwagger2
 public class SwaggerConfig {
@@ -139,7 +139,7 @@ public class SwaggerConfig {
             .build();
     }
 }
-```
+~~~
 
 ## 访问API地址
 

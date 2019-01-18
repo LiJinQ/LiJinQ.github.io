@@ -38,7 +38,7 @@ Eureka Service为框架内的服务提供注册功能。微服务在启动后，
 
 创建后的pom如下
 
-```
+~~~xml
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
@@ -104,31 +104,31 @@ Eureka Service为框架内的服务提供注册功能。微服务在启动后，
 
 </project>
 
-```
+~~~
 
 ##### 2.0以下版本需要引入以下依赖
 
-```
+~~~xml
 <!--eureka server -->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-eureka-server</artifactId>
 		</dependency>
-```
+~~~
 
 ##### 2.0以上版本需要引入以下依赖
 
-```
+~~~xml
 <!--eureka server -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
         </dependency>
-```
+~~~
 
 ### application.yml
 
-```
+~~~yml
 server:
   port: 8761
 
@@ -147,13 +147,13 @@ eureka:
     enable-self-preservation: false # 设为false，关闭自我保护
     eviction-interval-timer-in-ms: 40000  # 清理间隔（单位毫秒，默认是60*1000）
 
-```
+~~~
 
 ### DemoEurekaApplication.java
 
 Eureka Server需要在启动类上添加```@EnableEurekaServer```注解
 
-```
+~~~java
 @EnableEurekaServer
 @SpringBootApplication
 public class DemoEurekaApplication {
@@ -164,7 +164,7 @@ public class DemoEurekaApplication {
 
 }
 
-```
+~~~
 
 ### 运行效果
 
@@ -182,7 +182,7 @@ public class DemoEurekaApplication {
 
 ### pom
 
-```
+~~~xml
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
@@ -256,31 +256,31 @@ public class DemoEurekaApplication {
 
 </project>
 
-```
+~~~
 
 ##### 2.0以下版本需要引入以下依赖
 
-```
+~~~xml
 <!--eureka client-->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-eureka</artifactId>
 		</dependency>
-```
+~~~
 
 ##### 2.0以上版本需要引入以下依赖
 
-```
+~~~xml
 <!--eureka client-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
-```
+~~~
 
 ### application.yml
 
-```
+~~~yaml
 spring:
   application:
     #微服务名称，名字中不要出现下划线“_”，否则在使用Feign时会报错
@@ -294,14 +294,14 @@ eureka:
 server:
   #服务开放端口
   port: 8762
-```
+~~~
 
 ### DemoClient1Application.java
 
 2.0版本以下需要在启动类添加```@EnableEurekaClient```注解，
 2.0版本以上则无需添加注解。
 
-```
+~~~java
 @SpringBootApplication
 @RestController
 public class DemoClient1Application {
@@ -320,7 +320,7 @@ public class DemoClient1Application {
     }
 
 }
-```
+~~~
 
 ### 运行效果
 
@@ -337,7 +337,7 @@ service-client1服务已经注册到注册中心。
 
 # 参数配置
 
-```
+~~~yaml
 server:
   port: 8761
 
@@ -370,7 +370,7 @@ eureka:
     enable-self-preservation: false
     #清理无效节点的时间间隔，单位毫秒，默认是60*1000
     eviction-interval-timer-in-ms: 40000
-```
+~~~
 
 # End
 

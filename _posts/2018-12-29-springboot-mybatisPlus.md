@@ -18,7 +18,7 @@ tags:
 ## 数据库结构与测试数据
 
 MyBatis-Plus在自动生成代码时，会将数据库的注释同时生成到实体类中
-```
+~~~sql
 SET FOREIGN_KEY_CHECKS=0;
 
 -- ----------------------------
@@ -60,9 +60,11 @@ INSERT INTO `t_user` VALUES ('4', 'Sandy', '21', 'test4@baomidou.com', '2');
 INSERT INTO `t_user` VALUES ('5', 'Billie', '24', 'test5@baomidou.com', '2');
 SET FOREIGN_KEY_CHECKS=1;
 
-```
+~~~
+
 ## 依赖导入
-```
+
+~~~xml
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
@@ -108,13 +110,14 @@ SET FOREIGN_KEY_CHECKS=1;
             <artifactId>spring-boot-configuration-processor</artifactId>
             <optional>true</optional>
         </dependency>
-```
+~~~
+
 ## 配置文件 
 
 application.yml
 
 
-```
+~~~java
 spring:
   datasource:
       driver-class-name: com.mysql.jdbc.Driver
@@ -133,11 +136,11 @@ mybatis-plus:
   configuration:
     map-underscore-to-camel-case: true
     cache-enabled: false
-```
+~~~
 
 >MyBatis-Plus为我们提供了自动生成mapper.xml文件、pojo实体类、dao层、service层的方法，可以将其放在test文件下
 
-```
+~~~java
 public class CodeGenerator {
 
     /**
@@ -267,7 +270,8 @@ public class CodeGenerator {
         mpg.execute();
     }
 }
-```
+~~~
+
 ### 自动生成前
 ![生成前.jpg](https://upload-images.jianshu.io/upload_images/15504753-20a808067139ae2b.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
@@ -278,7 +282,7 @@ public class CodeGenerator {
 
 
 ### entity示例
-```
+~~~java
 /**
  * <p>
  * 
@@ -327,13 +331,15 @@ public class User extends Model<User> {
     }
 
 }
-```
+~~~
 自动生成主键需要在主键相应属性添加注解
-```
+
+~~~java
 @TableId(value = "id", type = IdType.UUID)
-```
+~~~
+
 ## CRUD操作
-```
+~~~java
 @Service
 public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements UserService {
 
@@ -378,7 +384,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
                 .orderByDesc("id");
     }
 }
-```
+~~~
 
 
 [MyBatis-Plus官方地址](https://mp.baomidou.com/)
