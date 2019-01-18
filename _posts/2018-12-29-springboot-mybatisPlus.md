@@ -4,7 +4,7 @@ title:      springboot集成mybatis-plus
 subtitle:   springboot项目笔记
 date:       2018-12-29
 author:     LJQ
-header-img: img/MyBatis-Plus-BG.jpg
+header-img: img/post-bj-MyBatis-Plus.jpg
 catalog: true
 tags:
     - springboot
