@@ -17,7 +17,7 @@ tags:
 如，我在数据库分页后查询到的类为```PageInfo<User>```，此时改类中的```list```属性为**User**，在当前的业务场景下，我需要将**User**类型替换为**UserVo**类型。
 当我们对list属性进行操作时，会同时导致PageInfo类中的其他属性发生改变，如total等。
 # 解决方法
-~~~Java
+~~~java
         //从数据库获得的Users分页列表
         //当我们打印users时，会发现打印出来的数据除了列表数据还有分页属性
         List<User> users = this.list();
@@ -33,7 +33,7 @@ tags:
 ~~~
 
 ##### pageInfoUtil
-~~~Java
+~~~java
 public class PageInfoUtil {
     public PageInfo getPageVo(PageInfo pageInfoPo,PageInfo pageInfoVo){
         pageInfoVo.setTotal(pageInfoPo.getTotal());
