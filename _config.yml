@@ -42,6 +42,11 @@ anchorjs: true                          # if you want to customize anchor. check
 gems: [jekyll-paginate]
 
 
+ highlight:
+    enable: true
+    line_number: true
+    auto_detect: false
+    ab_replace:
 
 
 # Markdown settings
