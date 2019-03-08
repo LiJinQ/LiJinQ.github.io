@@ -24,7 +24,7 @@ RSS: false
 # zhihu_username:     qiubaiying
 github_username:    LiJinQ
 #facebook_username:  baiying.qiu.7
-#jianshu_username:   e71990ada2fd
+jianshu_username:   e28eed6bcb37
 #twitter_username:   qiubaiying
 
 
@@ -114,5 +114,9 @@ friends: [
     {
         title: "方志朋的博客",
         href: "https://www.fangzhipeng.com/"
+    },
+    {
+      title: "BudLiang",
+      href: "http://BudLiang.top"
     }
 ]
