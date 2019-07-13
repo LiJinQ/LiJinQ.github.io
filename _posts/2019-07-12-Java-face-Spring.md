@@ -889,5 +889,4 @@ public class CustomEventListener implements ApplicationListener < CustomApplicat
 > - 依赖注入—贯穿于BeanFactory / ApplicationContext接口的核心理念。
 > - 工厂模式—BeanFactory用来创建对象的实例。
 
-**题目答案转载于[https://blog.csdn.net/umbrellasoft/article/details/81805954#spring_framework](https://blog.csdn.net/umbrellasoft/article/details/81805954#spring_framework)
-**
+**题目答案转载于[https://blog.csdn.net/umbrellasoft/article/details/81805954#spring_framework](https://blog.csdn.net/umbrellasoft/article/details/81805954#spring_framework)**
