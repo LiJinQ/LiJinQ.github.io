@@ -145,6 +145,7 @@ Spring框架至今已集成了20多个模块。这些模块主要有核心容器
 > Spring对Java配置的支持是由@Configuration注解和@Bean注解来实现的。由@Bean注解的方法将会实例化、配置和初始化一个新对象，这个对象将由Spring的IoC容器来管理。@Bean声明所起到的作用与<bean/> 元素类似。被@Configuration所注解的类则表示这个类的主要目的是作为bean定义的资源。被@Configuration声明的类可以通过在同一个类的内部调用@bean方法来设置嵌入bean的依赖关系。
 >
 > 最简单的@Configuration 声明类请参考下面的代码：
+
 ~~~java
 @Configuration
  
@@ -164,6 +165,7 @@ public class AppConfig
 ~~~
 
 > 对于上面的@Beans配置文件相同的XML配置文件如下：
+
 ~~~ xml
 <beans>
  
