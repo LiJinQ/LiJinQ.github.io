@@ -128,7 +128,7 @@ ArrayList 提供了更多的方法和特性，比如:addAll()，removeAll()，it
     5.编程的时候接口优于实现
     6.底层的集合实际上是空的情况下，返回为长度是0的集合或数组而不是null。
 
-##### 22.Comparable 和 Comparator 接口是干什么的？列出它们的区别
+##### 20.Comparable 和 Comparator 接口是干什么的？列出它们的区别
 
 链接：[https://www.nowcoder.com/questionTerminal/596ede1e92ac43f1b4ca81e96fe798e7?orderByHotValue=1&page=1&onlyReference=false](https://www.nowcoder.com/questionTerminal/596ede1e92ac43f1b4ca81e96fe798e7?orderByHotValue=1&page=1&onlyReference=false)
 来源：牛客网
